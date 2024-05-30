@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       this.userService.login(this.loginForm.value).subscribe(
         user => {
-          console.log('User logged in successfully', user);
+          console.log('User logged in successfully');
           localStorage.setItem('id', user.id.toString());
           localStorage.setItem('username', user.username);
           // localStorage.setItem('password', user.password);
