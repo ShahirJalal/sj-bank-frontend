@@ -51,6 +51,11 @@ export class TransferComponent implements OnInit {
       this.userService.getUserByAccountNumber(recipientAccountNumber).subscribe(
         recipient => {
           if (recipient) {
+            if (amount > this.sender!.initialBalance) {
+              this.transferForm.get('amount')?.setErrors({ insufficientFunds: true });
+              return;
+            }
+
             recipient.initialBalance += amount;
             this.userService.updateUser(recipient.id, recipient).subscribe(
               () => {
@@ -62,9 +67,9 @@ export class TransferComponent implements OnInit {
                         transactionType: 'transfer',
                         amount: amount,
                         recipientAccountNumber: recipient.accountNumber,
-                        senderAccountNumber: this.sender ? this.sender.accountNumber : '',
+                        senderAccountNumber: this.sender!.accountNumber,
                         reference: reference,
-                        sender: this.sender ? this.sender.username : '',
+                        sender: this.sender!.username,
                         recipient: recipient.username
                       };
                       this.transactionService.createTransaction(transaction).subscribe(
