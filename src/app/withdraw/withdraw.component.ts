@@ -48,7 +48,7 @@ export class WithdrawComponent implements OnInit {
       this.user.initialBalance -= withdrawAmount;
       this.userService.updateUser(this.user.id, this.user).subscribe(
         response => {
-          console.log('User balance updated successfully', response);
+          console.log('User balance updated successfully');
           const transaction = {
             transactionType: 'withdraw',
             amount: withdrawAmount,
