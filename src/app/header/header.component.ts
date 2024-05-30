@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-// commit test
+
   constructor(private router: Router) { }
 
   redirectToDashboard(): void {
