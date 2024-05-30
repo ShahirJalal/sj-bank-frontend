@@ -4,6 +4,11 @@
     <div>
       <label for="amount">Amount:</label>
       <input id="amount" formControlName="amount" type="number"/>
+      <div *ngIf="withdrawForm.get('amount')?.invalid && withdrawForm.get('amount')?.touched" class="error-message">
+        <small *ngIf="withdrawForm.get('amount')?.hasError('required')">Amount is required</small>
+        <small *ngIf="withdrawForm.get('amount')?.hasError('min')">Amount must be greater than 0</small>
+        <small *ngIf="withdrawForm.get('amount')?.hasError('insufficientFunds')">Insufficient funds</small>
+      </div>
     </div>
     <button type="submit">Withdraw</button>
   </form>

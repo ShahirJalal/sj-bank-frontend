@@ -42,3 +42,8 @@
 .withdaw-container form button:hover {
   background-color: #0056b3;
 }
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+}
