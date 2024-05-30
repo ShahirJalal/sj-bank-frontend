@@ -31,10 +31,10 @@ export class LoginComponent implements OnInit {
           console.log('User logged in successfully', user);
           localStorage.setItem('id', user.id.toString());
           localStorage.setItem('username', user.username);
-          localStorage.setItem('password', user.password);
-          localStorage.setItem('role', user.role);
-          localStorage.setItem('accountNumber', user.accountNumber);
-          localStorage.setItem('initialBalance', user.initialBalance.toString());
+          // localStorage.setItem('password', user.password);
+          // localStorage.setItem('role', user.role);
+          // localStorage.setItem('accountNumber', user.accountNumber);
+          // localStorage.setItem('initialBalance', user.initialBalance.toString());
           this.router.navigate(['/dashboard']);
         },
         error => {
