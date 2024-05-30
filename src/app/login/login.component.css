@@ -1,7 +1,7 @@
 .login-container {
   max-width: 400px;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 216px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -41,4 +41,8 @@
 
 .login-container form button:hover {
   background-color: #0056b3;
+}
+
+.login-container .register-link {
+  text-align: center;
 }

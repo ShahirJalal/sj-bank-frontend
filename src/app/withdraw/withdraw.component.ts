@@ -42,7 +42,7 @@ export class WithdrawComponent implements OnInit {
     if (this.withdrawForm.valid && this.user) {
       const withdrawAmount = this.withdrawForm.value.amount;
       if (withdrawAmount > this.user.initialBalance) {
-        console.error('Withdrawal amount exceeds available balance');
+        this.withdrawForm.get('amount')!.setErrors({ insufficientFunds: true });
         return;
       }
       this.user.initialBalance -= withdrawAmount;
