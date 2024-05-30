@@ -1,0 +1,18 @@
+<div class="transfer-container">
+  <h2>Transfer Fund</h2>
+  <form [formGroup]="transferForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="amount">Amount:</label>
+      <input id="amount" formControlName="amount" type="number"/>
+    </div>
+        <div>
+          <label for="recipientAccountNumber">Recipient Account Number:</label>
+          <input id="recipientAccountNumber" formControlName="recipientAccountNumber" type="text"/>
+        </div>
+        <div>
+          <label for="reference">Reference:</label>
+          <input id="reference" formControlName="reference" type="text"/>
+        </div>
+    <button type="submit">Transfer</button>
+  </form>
+</div>

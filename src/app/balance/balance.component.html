@@ -1,0 +1,30 @@
+<!--<div class="balance-container">-->
+<!--  <h2>Account Balance</h2>-->
+<!--  <form [formGroup]="depositForm" (ngSubmit)="onSubmit()">-->
+<!--    <div>-->
+<!--      <label for="amount">Amount</label>-->
+<!--      <input id="amount" formControlName="amount" type="number"/>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <label for="recipientAccountNumber">Recipient Account Number</label>-->
+<!--      <input id="recipientAccountNumber" formControlName="recipientAccountNumber" type="text"/>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <label for="reference">Reference</label>-->
+<!--      <input id="reference" formControlName="reference" type="text"/>-->
+<!--    </div>-->
+<!--    <button type="submit">Transfer</button>-->
+<!--  </form>-->
+<!--</div>-->
+
+<!--<div class="balance-container">-->
+<!--  <h2>Account Balance</h2>-->
+<!--  <h4>Account Number: 2344567738</h4>-->
+<!--  <h4>Balance: RM 4500.00</h4>-->
+<!--</div>-->
+
+<div class="balance-container">
+  <h2>Account Balance</h2>
+  <h4>Account Number: {{ accountNumber }}</h4>
+  <h4>Balance: RM {{ balance | number:'1.2-2' }}</h4>
+</div>
