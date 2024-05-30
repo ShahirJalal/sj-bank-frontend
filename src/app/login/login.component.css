@@ -42,3 +42,7 @@
 .login-container form button:hover {
   background-color: #0056b3;
 }
+
+.login-container .register-link {
+  text-align: center;
+}
