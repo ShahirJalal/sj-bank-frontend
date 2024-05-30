@@ -44,7 +44,7 @@ export class DepositComponent implements OnInit {
       this.user.initialBalance += depositAmount;
       this.userService.updateUser(this.user.id, this.user).subscribe(
         response => {
-          console.log('User balance updated successfully', response);
+          console.log('User balance updated successfully');
           const transaction = {
             transactionType: 'deposit',
             amount: depositAmount,
