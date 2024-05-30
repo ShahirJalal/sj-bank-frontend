@@ -7,8 +7,8 @@ import { Transaction } from '../models/transaction.model';
   providedIn: 'root'
 })
 export class TransactionService {
-  private baseUrl = 'http://localhost:8080/api/transactions';
-  // private baseUrl = 'https://sj-bank-backend-93e1d47260fe.herokuapp.com/api/transactions';
+  // private baseUrl = 'http://localhost:8080/api/transactions';
+  private baseUrl = 'https://sj-bank-backend-93e1d47260fe.herokuapp.com/api/transactions';
 
   constructor(private http: HttpClient) { }
 
